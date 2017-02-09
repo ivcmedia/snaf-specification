@@ -1,0 +1,61 @@
+# Blockquote
+
+A large block of quoted text, often represented as offset from the surrounding
+text.
+
+## Supported Consumers
+
+- [x] Apple News
+- [x] AMP
+- [x] Facebook Instant Articles
+
+### Apple News
+
+Renders as a `Quote` component. If there is attribution, it is rendered inside
+of a nested `<cite>` tag.
+
+### AMP
+
+Renders as a `<blockquote>` tag. If there is attribution, it is rendered inside
+of a nested `<cite>` tag.
+
+### Facebook Instant Articles
+
+Renders as a `Blockquote` component. If there is attribution, it is rendered
+inside of a nested `<cite>` tag.
+
+## Parameters
+
+.Parameters
+|===
+|Field |Type |Required |Description
+
+|"text"
+|Text
+|Required
+|The quoted text.
+
+|"attribution"
+|Text
+|Optional
+|Freeform attribution of the quote.
+
+|===
+
+## Examples
+
+[source,json]
+----
+{
+  "@type": "blockquote",
+  "text": {
+    "@type": "text",
+    "text": "Four score and seven years ago...",
+  },
+  "attribution": {
+    "@type": "text",
+    "link": "https://en.wikipedia.org/wiki/Gettysburg_Address",
+    "text": "Abraham Lincoln"
+  }
+}
+----
