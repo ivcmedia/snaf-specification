@@ -21,7 +21,11 @@ property of the `Figure`.
 If `"caption"` is provided its text is added to the `caption` property of the
 `Figure`.
 
-If `"attribution"` is provided and `"caption"` is not
+If `"attribution"` is provided and `"caption"` is not provided, the text of
+`"attribution"` is added to the `caption` property of the `Figure`. If both
+`"attribution"` and `"caption"` are provided then the text of `"attribution"` is
+appended to the `"caption"` with a space and both text are added to the
+`caption` property of the `Figure`.
 
 ### AMP
 
