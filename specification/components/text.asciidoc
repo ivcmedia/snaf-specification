@@ -1,0 +1,203 @@
+# Text
+
+[.lead]
+A group of semantically- or typographically-related text.
+
+## Overview
+
+Text supports the following modifiers that alter the contained text's semantic
+meaning and typographic attributes:
+
+isEmphasized::
+  Indicates that the text should be emphasized or is in an alternate voice,
+  often represented by an italic font style.
+isStrong::
+  Indicates that the text has strong importance, often represented by a bold
+  text style.
+textPosition::
+  Indicates that the text should typeset as subscript or superscript, often
+  represented as smaller and higher or lower than the surrounding text.
+isStrikethrough::
+  Indicates that the text is no longer relevant or accurate or has been removed
+  in an edit, often represented by a line through the middle of the text.
+link::
+  Indicates that the text refers to a web resource.
+
+Multiple modifiers may be used together on the same text, and modifiers may be
+nested by nesting text components.
+
+## Supported Consumers
+
+- [x] Apple News
+- [x] AMP
+- [x] Facebook Instant Articles
+
+All three consumers render Text as a text string within its parent
+<<Paragraph>>. If there are any semantic modifiers on the Text, those are
+rendered using the following tags:
+
+isEmphasized::
+  Uses a `<em>` tag.
+isStrong::
+  Uses a `<strong>` tag.
+textPosition::
+  Uses a `<sub>` or `<sup>` tag for `"subscript"` and `"superscript"`,
+  respectively
+isStrikethrough::
+  Uses a `<s>` tag.
+link::
+  Uses a `<a>` tag with its href attribute set to the url.
+
+## Parameters
+
+.Parameters
+|===
+|Field |Type |Required |Description
+
+|"text"
+|string \| [Text]
+|Required
+|The group of text. May contain nested Text or plain strings. Plain strings are
+always escaped to prevent CWE-79 (Cross-site scripting) attacks.
+
+|"isEmphasized"
+|boolean
+|Optional (default false)
+|Whether this text should be emphasized.
+
+|"isStrong"
+|boolean
+|Optional (default false)
+|Whether this text should be marked with strong importance.
+
+|"textPosition"
+|"baseline" \| "subscript" \| "superscript"
+|Optional (default "baseline")
+|The position of the text, either baseline, subscripted or superscripted.
+
+|"isStrikethrough"
+|boolean
+|Optional (default false)
+|Whether this text should be marked as stricken.
+
+|"link"
+|Url
+|Optional
+|URL that identifies a web resource referred to by this text.
+
+|===
+
+## Examples
+
+.Example 1: Plain text
+`The red fox jumped over the white fence.`
+[source,json]
+----
+{
+  "@type": "paragraph",
+  "content": [
+    {
+      "@type": "text",
+      "text": "The red fox jumped over the white fence."
+    }
+  ]
+}
+----
+
+.Example 2: Common Modifiers
+`It is _imparative_ that [line-through]#you# we act *now*!`
+[source,json]
+----
+{
+  "@type": "paragraph",
+  "content": [
+    {
+      "@type": "text",
+      "text": "It is "
+    },
+    {
+      "@type": "text",
+      "emphasize": true,
+      "text": "imperative"
+    },
+    {
+      "@type": "text",
+      "text": " that "
+    },
+    {
+      "@type": "text",
+      "isStrikethrough": true,
+      "text": "you"
+    },
+    {
+      "@type": "text",
+      "text": " we act "
+    },
+    {
+      "@type": "text",
+      "isStrong": true,
+      "text": "now"
+    },
+    {
+      "@type": "text",
+      "text": "!"
+    }
+  ]
+}
+----
+
+.Example 3: Links and Nested Modifiers
+`According to https://en.wikipedia.org/wiki/Water[Wikipedia], the _chemical formula_ of water is *H~2~O*.`
+[source,json]
+----
+{
+  "@type": "paragraph",
+  "content": [
+    {
+      "@type": "text",
+      "text": "According to "
+    },
+    {
+      "@type": "text",
+      "link": "https://en.wikipedia.org/wiki/Water",
+      "text": "Wikipedia"
+    },
+    {
+      "@type": "text",
+      "text": ", the "
+    },
+    {
+      "@type": "text",
+      "isEmphasis": true,
+      "text": "chemical formula"
+    },
+    {
+      "@type": "text",
+      "text": " of water is "
+    },
+    {
+      "@type": "text",
+      "isStrong": true,
+      "text": [
+        {
+          "@type": "text",
+          "text": "H"
+        },
+        {
+          "@type": "text",
+          "textPosition": "subscript",
+          "text": "2"
+        },
+        {
+          "@type": "text",
+          "text": "O"
+        }
+      ]
+    },
+    {
+      "@type": "text",
+      "text": "."
+    }
+  ]
+}
+----
