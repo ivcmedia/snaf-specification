@@ -9,19 +9,16 @@ multiple fields (represented as JSON objects).
 The following sections describe each of these data types in detail, including
 how the datatype is represented in SNAF JSON, their invariants, and
 
-ifndef::env-github[]
-:leveloffset: 2
-endif::[]
-include::author.asciidoc[]
+include::author.asciidoc[leveloffset=+1]
 
-include::date_time.asciidoc[]
+include::date_time.asciidoc[leveloffset=+1]
 
-include::email_address.asciidoc[]
+include::email_address.asciidoc[leveloffset=+1]
 
-include::image.asciidoc[]
+include::image.asciidoc[leveloffset=+1]
 
-include::publisher.asciidoc[]
+include::publisher.asciidoc[leveloffset=+1]
 
-include::string.asciidoc[]
+include::string.asciidoc[leveloffset=+1]
 
-include::url.asciidoc[]
+include::url.asciidoc[leveloffset=+1]

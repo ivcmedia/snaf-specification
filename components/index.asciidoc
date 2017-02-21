@@ -20,16 +20,12 @@ represented as the the following JSON object:
 
 The following sections document these components and their parameters.
 
-ifndef::env-github[]
-:leveloffset: 2
-endif::[]
+include::blockquote.asciidoc[leveloffset=+1]
 
-include::blockquote.asciidoc[]
+include::image.asciidoc[leveloffset=+1]
 
-include::image.asciidoc[]
+include::paragraph.asciidoc[leveloffset=+1]
 
-include::paragraph.asciidoc[]
+include::section.asciidoc[leveloffset=+1]
 
-include::section.asciidoc[]
-
-include::text.asciidoc[]
+include::text.asciidoc[leveloffset=+1]

@@ -3,17 +3,8 @@ M. George Hansen <technopolitica@gmail.com>
 v0.1.0, 2017-02-21
 :toc:
 
-ifndef::env-github[]
-:leveloffset: 1
-endif::[]
-include::news_article.asciidoc[]
+include::news_article.asciidoc[leveloffset=+1]
 
-ifndef::env-github[]
-:leveloffset: 1
-endif::[]
-include::data_types/index.asciidoc[]
+include::data_types/index.asciidoc[leveloffset=+1]
 
-ifndef::env-github[]
-:leveloffset: 1
-endif::[]
-include::components/index.asciidoc[]
+include::components/index.asciidoc[leveloffset=+1]
