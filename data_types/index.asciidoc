@@ -13,9 +13,15 @@ ifndef::env-github[]
 :leveloffset: 2
 endif::[]
 include::author.asciidoc[]
+
 include::date_time.asciidoc[]
+
 include::email_address.asciidoc[]
+
 include::image.asciidoc[]
+
 include::publisher.asciidoc[]
+
 include::string.asciidoc[]
+
 include::url.asciidoc[]

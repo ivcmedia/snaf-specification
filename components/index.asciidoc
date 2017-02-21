@@ -23,8 +23,13 @@ The following sections document these components and their parameters.
 ifndef::env-github[]
 :leveloffset: 2
 endif::[]
+
 include::blockquote.asciidoc[]
+
 include::image.asciidoc[]
+
 include::paragraph.asciidoc[]
+
 include::section.asciidoc[]
+
 include::text.asciidoc[]
