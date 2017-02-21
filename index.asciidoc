@@ -1,5 +1,5 @@
 = Structured News Article Format (SNAF)
-M. George Hansen <technopolitica@gmail.com>
+M. George Hansen <technopolitica@gmail.com>; Anthony Astolfi <mailto:anthony@ivc.media[]>
 v0.1.0, 2017-02-21
 :toc: left
 
