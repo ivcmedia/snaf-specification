@@ -1,0 +1,27 @@
+= Components
+
+The body of a <<NewsArticle,NewsArticles>> is broken up into individual, modular
+components.
+
+All components are represented as JSON objects with a special "@type" key that
+identifies the type of component. For example, an image component might be
+represented as the the following JSON object:
+
+[source,json]
+--
+{
+  "@type": "image",
+  "url": "https://example.com/images/example.jpeg",
+  "width": 300,
+  "height": 150
+}
+--
+
+The following sections document these components and their parameters.
+
+:leveloffset: 2
+include::blockquote.asciidoc[]
+include::image.asciidoc[]
+include::paragraph.asciidoc[]
+include::section.asciidoc[]
+include::text.asciidoc[]

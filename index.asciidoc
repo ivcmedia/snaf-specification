@@ -1,0 +1,9 @@
+= Structured News Article Format (SNAF)
+M. George Hansen <technopolitica@gmail.com>
+v0.1.0, 2017-02-21
+:toc:
+
+:leveloffset: 1
+include::news_article.asciidoc[]
+include::data_types/index.asciidoc[]
+include::components/index.asciidoc[]

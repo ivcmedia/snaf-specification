@@ -1,0 +1,18 @@
+= Data Types
+
+The SNAF specification relies on a set of basic data types to describe the
+shape of a <<NewsArticle>>. These basic data types may be represented as JSON
+primitives, such as strings and ints, or may be more complex structures with
+multiple fields (represented as JSON objects).
+
+The following sections describe each of these data types in detail, including
+how the datatype is represented in SNAF JSON, their invariants, and
+
+:leveloffset: 2
+include::author.asciidoc[]
+include::date_time.asciidoc[]
+include::email_address.asciidoc[]
+include::image.asciidoc[]
+include::publisher.asciidoc[]
+include::string.asciidoc[]
+include::url.asciidoc[]
