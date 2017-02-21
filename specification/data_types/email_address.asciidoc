@@ -1,9 +1,9 @@
-# EmailAddress
+= EmailAddress
 
 [.lead]
 A <<string>> containing a parsable email address.
 
-## Validations
+== Validations
 
 - Must be fewer than 254 characters long.footnote:[This is to protect against
   potential denial of service attacks. The length of 254 characters is based
@@ -13,7 +13,7 @@ A <<string>> containing a parsable email address.
 - Must match the PCRE regex `^.+@.+$`.footnote:[This regex is only meant to
   protect against the most egregious errors in email address entry.]
 
-## Examples
+== Examples
 
 .Example 1: Valid Email Addresses
 [source,json]

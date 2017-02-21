@@ -1,9 +1,9 @@
-# Url
+= Url
 
 [.lead]
 A <<string>> containing a valid, absolute URL.
 
-## Validations
+== Validations
 
 - Must be parsable as a valid URL according to
   https://tools.ietf.org/html/rfc7230[RFC 7230].
@@ -20,7 +20,7 @@ A <<string>> containing a valid, absolute URL.
 - May contain a query.
 - May contain a fragment.
 
-## Examples
+== Examples
 
 .Example 1: Valid URLs
 [source,json]

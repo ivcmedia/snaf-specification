@@ -1,14 +1,14 @@
-# DateTime
+= DateTime
 
 [.lead]
 A <<string>> containing an ISO 8601 datetime.
 
-## Validations
+== Validations
 
 - Must be a valid ISO 8601 formatted string containing the date, time, and
   timezone offset for a single point in time, e.g. "YYYY-MM-DDThh:mm:ss±hh:mm".
 
-## Examples
+== Examples
 
 .Valid DateTimes
 [source,json]

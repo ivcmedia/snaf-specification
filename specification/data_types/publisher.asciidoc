@@ -1,10 +1,10 @@
-# Publisher
+= Publisher
 
 [.lead]
 Structure describing a news article's publisher, including their name and
 contact info.
 
-## Parameters
+== Parameters
 
 .Parameters
 |===
@@ -22,7 +22,7 @@ contact info.
 
 |===
 
-## Examples
+== Examples
 
 .Examples
 [source,json]

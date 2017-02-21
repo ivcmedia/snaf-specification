@@ -1,9 +1,9 @@
-# Image
+= Image
 
 [.lead]
 A structure describing a remote image resource in a web-compatible format.
 
-## Parameters
+== Parameters
 
 .Parameters
 |===
@@ -21,14 +21,14 @@ A structure describing a remote image resource in a web-compatible format.
 
 |===
 
-## Validations
+== Validations
 
 - `"url"` must point to an image file in one of the following formats: PNG,
   JPEG, GIF.
 - `"width"` must be non-zero.
 - `"height"` must be non-zero.
 
-## Examples
+== Examples
 
 .Examples
 [source,json]
