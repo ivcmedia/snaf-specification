@@ -1,7 +1,7 @@
 = Structured News Article Format (SNAF)
 M. George Hansen <technopolitica@gmail.com>
 v0.1.0, 2017-02-21
-:toc:
+:toc: left
 
 include::news_article.asciidoc[leveloffset=+1]
 
