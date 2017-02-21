@@ -62,7 +62,7 @@ contain any formatting or markup.
 |Image used as the cover or feature on teasers and article header.
 
 |"body"
-|[<<Component>>]
+|[<<Components,Component>>]
 |Required
 |Body of the article, broken into individual components.
 
