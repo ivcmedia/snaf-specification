@@ -1,10 +1,4 @@
-= Structured News Article Format (SNAF)
-M. George Hansen <technopolitica@gmail.com>
-v0.1.0, 2017-02-21
-:toc: left
+= Structured News Article Format (SNAF) Specification
 
-include::news_article.asciidoc[leveloffset=+1]
-
-include::data_types/index.asciidoc[leveloffset=+1]
-
-include::components/index.asciidoc[leveloffset=+1]
+This is the SNAF formal specification. The latest version of the specification
+can be accessed at the https://ivcmedia.github.io/snaf-specification[GitHub Page].
