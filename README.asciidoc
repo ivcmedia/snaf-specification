@@ -2,13 +2,18 @@
 M. George Hansen <technopolitica@gmail.com>
 v0.1.0, 2017-02-21
 :toc:
-:toc-placement: preamble
 
 ifndef::env-github[]
 :leveloffset: 1
-include::news_article.asciidoc[]
-:leveloffset: 1
-include::data_types/index.asciidoc[]
-:leveloffset: 1
-include::components/index.asciidoc[]
 endif::[]
+include::news_article.asciidoc[]
+
+ifndef::env-github[]
+:leveloffset: 1
+endif::[]
+include::data_types/index.asciidoc[]
+
+ifndef::env-github[]
+:leveloffset: 1
+endif::[]
+include::components/index.asciidoc[]

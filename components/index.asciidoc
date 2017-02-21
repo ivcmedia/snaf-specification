@@ -20,7 +20,9 @@ represented as the the following JSON object:
 
 The following sections document these components and their parameters.
 
+ifndef::env-github[]
 :leveloffset: 2
+endif::[]
 include::blockquote.asciidoc[]
 include::image.asciidoc[]
 include::paragraph.asciidoc[]
