@@ -1,3 +1,4 @@
+[[BlockquoteComponent]]
 = Blockquote
 
 A large block of quoted text, often represented as offset from the surrounding

@@ -1,3 +1,4 @@
+[[Publisher]]
 = Publisher
 
 Structure describing a news article's publisher, including their name and

@@ -1,3 +1,4 @@
+[[SectionComponent]]
 = Section
 
 A group of paragraphs and other block elements with a title.

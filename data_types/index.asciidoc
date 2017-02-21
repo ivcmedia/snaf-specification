@@ -1,3 +1,4 @@
+[[DataTypes]]
 = Data Types
 
 The SNAF specification relies on a set of basic data types to describe the

@@ -1,3 +1,4 @@
+[[ComponentsSection]]
 = Components
 
 The body of a <<NewsArticle,NewsArticles>> is broken up into individual, modular

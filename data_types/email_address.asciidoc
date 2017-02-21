@@ -1,3 +1,4 @@
+[[EmailAddress]]
 = EmailAddress
 
 A <<string>> containing a parsable email address.

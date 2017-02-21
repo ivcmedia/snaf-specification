@@ -1,3 +1,4 @@
+[[string]]
 = string
 
 A JSON string containing valid UTF-8 text.

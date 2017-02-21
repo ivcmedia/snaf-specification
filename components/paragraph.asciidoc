@@ -1,3 +1,4 @@
+[[ParagraphComponent]]
 = Paragraph
 
 A group of text and inline components.

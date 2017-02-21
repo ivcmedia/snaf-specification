@@ -1,3 +1,4 @@
+[[ImageComponent]]
 = Image
 
 An image in a one of the following web formats:
