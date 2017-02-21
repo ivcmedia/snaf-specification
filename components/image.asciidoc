@@ -1,17 +1,17 @@
-# Image
+= Image
 
 An image in a one of the following web formats:
 - PNG
 - JPEG
 - GIF
 
-## Supported Consumers
+== Supported Consumers
 
 - [x] Apple News
 - [x] AMP
 - [x] Facebook Instant Articles
 
-### Apple News
+=== Apple News
 
 Renders as a `Figure` component.
 
@@ -27,7 +27,7 @@ If `"attribution"` is provided and `"caption"` is not provided, the text of
 appended to the `"caption"` with a space and both text are added to the
 `caption` property of the `Figure`.
 
-### AMP
+=== AMP
 
 If `"format"` is `"png"` or `"jpeg"` it renders as an `<amp-img>` tag; if
 `"format"` is `"gif"` it renders as an `<amp-img>` nested in an `<amp-anim>`.
@@ -38,12 +38,12 @@ is populated with the `"attribution"` text.
 If `"caption"` is provided the output is wrapped in a `<figure>` tag and a
 `<figcaption>` tag is added to the bottom containing the `"caption"` content.
 
-### Facebook Instant Articles
+=== Facebook Instant Articles
 
 If `"format"` is `"png"` or `"jpeg"` it renders as an `Image` component; if
 `"format"` is `"gif"` it renders as an `"Animated GIF"` component.
 
-## Parameters
+== Parameters
 
 .Parameters
 |===
@@ -88,7 +88,7 @@ If `"format"` is `"png"` or `"jpeg"` it renders as an `Image` component; if
 
 |===
 
-## Examples
+== Examples
 
 [source,json]
 ----

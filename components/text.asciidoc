@@ -1,8 +1,8 @@
-# Text
+= Text
 
 A group of semantically- or typographically-related text.
 
-## Overview
+== Overview
 
 Text supports the following modifiers that alter the contained text's semantic
 meaning and typographic attributes:
@@ -25,7 +25,7 @@ link::
 Multiple modifiers may be used together on the same text, and modifiers may be
 nested by nesting text components.
 
-## Supported Consumers
+== Supported Consumers
 
 - [x] Apple News
 - [x] AMP
@@ -47,7 +47,7 @@ isStrikethrough::
 link::
   Uses a `<a>` tag with its href attribute set to the url.
 
-## Parameters
+== Parameters
 
 .Parameters
 |===
@@ -86,7 +86,7 @@ always escaped to prevent CWE-79 (Cross-site scripting) attacks.
 
 |===
 
-## Examples
+== Examples
 
 .Example 1: Plain text
 `The red fox jumped over the white fence.`

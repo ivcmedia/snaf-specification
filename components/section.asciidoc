@@ -1,14 +1,14 @@
-# Section
+= Section
 
 A group of paragraphs and other block elements with a title.
 
-## Supported Consumers
+== Supported Consumers
 
 - [x] Apple News
 - [x] AMP
 - [x] Facebook Instant Articles
 
-## Parameters
+== Parameters
 
 .Parameters
 |===
@@ -21,7 +21,7 @@ A group of paragraphs and other block elements with a title.
 
 |===
 
-## Examples
+== Examples
 
 [source,json]
 ----

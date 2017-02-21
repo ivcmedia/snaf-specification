@@ -1,8 +1,8 @@
-# Paragraph
+= Paragraph
 
 A group of text and inline components.
 
-## Supported Consumers
+== Supported Consumers
 
 - [x] Apple News
 - [x] AMP
@@ -10,7 +10,7 @@ A group of text and inline components.
 
 All three render paragraphs as `<p>` tags with their nested text.
 
-## Parameters
+== Parameters
 
 .Parameters
 |===
@@ -23,7 +23,7 @@ All three render paragraphs as `<p>` tags with their nested text.
 
 |===
 
-## Examples
+== Examples
 
 [source,json]
 ----
