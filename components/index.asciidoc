@@ -25,6 +25,4 @@ include::image.asciidoc[leveloffset=+1]
 
 include::paragraph.asciidoc[leveloffset=+1]
 
-include::section.asciidoc[leveloffset=+1]
-
 include::text.asciidoc[leveloffset=+1]
