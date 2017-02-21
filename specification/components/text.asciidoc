@@ -1,6 +1,5 @@
 # Text
 
-[.lead]
 A group of semantically- or typographically-related text.
 
 ## Overview

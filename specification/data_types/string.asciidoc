@@ -1,6 +1,5 @@
 = string
 
-[.lead]
 A JSON string containing valid UTF-8 text.
 
 == Validations

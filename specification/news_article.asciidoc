@@ -1,6 +1,5 @@
 = News Article
 
-[.lead]
 A complete news article, ready to be output in a variety of different formats
 by consumers such as Facebook Instant Articles, Google AMP, and Apple News.
 

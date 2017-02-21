@@ -1,6 +1,5 @@
 = Url
 
-[.lead]
 A <<string>> containing a valid, absolute URL.
 
 == Validations

@@ -1,6 +1,5 @@
 = Publisher
 
-[.lead]
 Structure describing a news article's publisher, including their name and
 contact info.
 

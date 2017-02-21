@@ -1,6 +1,5 @@
 = DateTime
 
-[.lead]
 A <<string>> containing an ISO 8601 datetime.
 
 == Validations

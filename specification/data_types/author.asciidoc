@@ -1,6 +1,5 @@
 = Author
 
-[.lead]
 Structure describing a news article's author, including their name and contact
 info.
 

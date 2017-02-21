@@ -1,6 +1,5 @@
 = Image
 
-[.lead]
 A structure describing a remote image resource in a web-compatible format.
 
 == Parameters
