@@ -14,17 +14,25 @@ A structure describing a remote image resource in a web-compatible format.
 |Required
 |Url pointing to the image resource.
 
+|"format"
+|"png"\|"jpeg"\|"gif"
+|Required
+|The format of the image. Currently only PNG, JPEG and GIF images are supported.
+
 |"width"
 |<<int>>
-|Optional
-|Contact email address for the publisher.
+|Required
+|Width of the image in pixels.
+
+|"height"
+|<<int>>
+|Required
+|Height of the image in pixels.
 
 |===
 
 == Validations
 
-- `"url"` must point to an image file in one of the following formats: PNG,
-  JPEG, GIF.
 - `"width"` must be non-zero.
 - `"height"` must be non-zero.
 
@@ -35,6 +43,7 @@ A structure describing a remote image resource in a web-compatible format.
 ----
 {
   "url": "https://example.com/some-image.png",
+  "format": "png",
   "width": 1200,
   "height": 800
 }
