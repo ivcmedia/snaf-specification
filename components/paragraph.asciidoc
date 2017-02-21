@@ -17,8 +17,8 @@ All three render paragraphs as `<p>` tags with their nested text.
 |===
 |Field |Type |Required |Description
 
-|"content"
-|Text[]
+|"text"
+|[<<Text>>]
 |Required
 |The ordered text content belonging to the paragraph.
 
@@ -30,7 +30,7 @@ All three render paragraphs as `<p>` tags with their nested text.
 ----
 {
   "@type": "paragraph",
-  "content": [
+  "text": [
     {
       "@type": "text",
       "text": "According to "
