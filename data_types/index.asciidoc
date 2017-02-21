@@ -21,4 +21,6 @@ include::publisher.asciidoc[leveloffset=+1]
 
 include::string.asciidoc[leveloffset=+1]
 
+include::u32.asciidoc[leveloffset=+1]
+
 include::url.asciidoc[leveloffset=+1]

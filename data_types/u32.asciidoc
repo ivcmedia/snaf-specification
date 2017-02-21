@@ -1,0 +1,51 @@
+[[u32]]
+# u32
+
+A 32-bit unsigned integer represented as a JSON number.
+
+## Validations
+
+- Must be a positive integer in the range [0, 4294967296).
+
+## Examples
+
+.Valid u32s
+[source,json]
+----
+[
+  0,
+  1,
+  123456,
+  3.5e4
+]
+----
+
+.Invalid u32s
+----
+[
+  {
+    "value": "2",
+    "errors": [
+      "Strings are not automatically cast to integers"
+    ]
+  },
+  {
+    "value": -3,
+    "errors": [
+      "Only positive integers are allowed as u32s"
+    ]
+  },
+  {
+    "value": 2.456,
+    "errors": [
+      "u32s must be whole integers"
+    ]
+  },
+  {
+    "value": 3.2e12,
+    "errors": [
+      "Number exceeds maximum allowed u32 value of 4294967295 (2^32 - 1)"
+    ]
+  }
+]
+----

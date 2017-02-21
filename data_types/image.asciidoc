@@ -20,12 +20,12 @@ A structure describing a remote image resource in a web-compatible format.
 |The format of the image. Currently only PNG, JPEG and GIF images are supported.
 
 |"width"
-|<<int>>
+|<<u32>>
 |Required
 |Width of the image in pixels.
 
 |"height"
-|<<int>>
+|<<u32>>
 |Required
 |Height of the image in pixels.
 
