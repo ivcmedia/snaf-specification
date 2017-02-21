@@ -1,0 +1,41 @@
+# Image
+
+[.lead]
+A structure describing a remote image resource in a web-compatible format.
+
+## Parameters
+
+.Parameters
+|===
+|Field |Type |Required |Description
+
+|"url"
+|<<Url>>
+|Required
+|Url pointing to the image resource.
+
+|"width"
+|<<int>>
+|Optional
+|Contact email address for the publisher.
+
+|===
+
+## Validations
+
+- `"url"` must point to an image file in one of the following formats: PNG,
+  JPEG, GIF.
+- `"width"` must be non-zero.
+- `"height"` must be non-zero.
+
+## Examples
+
+.Examples
+[source,json]
+----
+{
+  "url": "https://example.com/some-image.png",
+  "width": 1200,
+  "height": 800
+}
+----

@@ -1,0 +1,60 @@
+# Url
+
+[.lead]
+A <<string>> containing a valid, absolute URL.
+
+## Validations
+
+- Must be parsable as a valid URL according to
+  https://tools.ietf.org/html/rfc7230[RFC 7230].
+- Must be under 2,000 characters.footnote:[This protects against potential
+  denial of service attacks. The 2,000 character limit was chosen based upon
+  recommendations from a StackOverflow post:
+  http://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url-in-different-browsers]
+- Must have a scheme of "http" or "https". If a resource is available over
+  https then that scheme should be preferred.
+- Must NOT have an authority part.footnote:[SNAF articles are meant to be publicly
+  distributed, hard-coding usernames and passwords is a very bad idea and is
+  forbidden.]
+- May contain a path.
+- May contain a query.
+- May contain a fragment.
+
+## Examples
+
+.Example 1: Valid URLs
+[source,json]
+----
+[
+  "http://example.com",
+  "https://example.com/some/path/index.html",
+  "https://server1.example.com/?p=123456",
+  "http://www.example.com/some/path/index.php?p=34234234#section-1"
+]
+----
+
+.Example 2: Invalid URLs
+[source,json]
+----
+[
+  {
+    "input": "example.com/some/path/",
+    "errors": [
+      "Url does not specify a scheme, either \"http\" or \"https\" required"
+    ]
+  },
+  {
+    "input": "//example.com/some/path",
+    "errors": [
+      "Url does not specify a scheme, either \"http\" or \"https\" required",
+      "Protocol-neutral Urls are not allowed"
+    ]
+  },
+  {
+    "input": "https://username:secretpassword@example.com/some/path/index.html",
+    "errors": [
+      "Authority sections are not allowed in public Urls"
+    ]
+  }
+]
+----

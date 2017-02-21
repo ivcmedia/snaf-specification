@@ -1,0 +1,15 @@
+# string
+
+[.lead]
+A JSON string containing valid UTF-8 text.
+
+## Validations
+
+- Must be UTF-8 encoded.
+- Unless otherwise stated, all strings are limited to 4086 bytes.footnote:[
+  This is to protect against potential denial of service attacks. The value of
+  4086 bytes is somewhat arbitrary, but a typical english paragraph is between
+  2-5 lines of 50-60 characters each or around 300 bytes in UTF-8. A limit of
+  4086 bytes is plenty of room for english sentences and should be enough for
+  fairly lengthy Chinese and other languages that assign multiple bytes per
+  character]

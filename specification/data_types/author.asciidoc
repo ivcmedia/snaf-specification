@@ -1,0 +1,50 @@
+# Author
+
+[.lead]
+Structure describing a news article's author, including their name and contact
+info.
+
+## Parameters
+
+.Parameters
+|===
+|Field |Type |Required |Description
+
+|"name"
+|<<string>> \| {first_name: <<string>>, middle_name: <<string>>?, last_name: <<string>>}
+|Required
+|Name of the author, either a nickname or a full name.
+
+|"email_address"
+|<<EmailAddress>>
+|Optional
+|Contact email address for the author.
+
+|===
+
+## Validations
+
+- `"name"` must not be an empty string for nicknames, and for full names both
+  `"first_name"` and `"last_name"` must not be empty strings. If `"middle_name"`
+  is provided, it must be non-empty.
+
+## Examples
+
+.Examples
+[source,json]
+----
+[
+  {
+    "name": {
+      "first_name": "John",
+      "middle_name": "M.",
+      "last_name": "Doe"
+    },
+    "email_address": "johndoe@example.org"
+  },
+  {
+    "name": "nickame",
+    "email_address": "johndoe@example.org"
+  }
+]
+----

@@ -1,0 +1,34 @@
+# Publisher
+
+[.lead]
+Structure describing a news article's publisher, including their name and
+contact info.
+
+## Parameters
+
+.Parameters
+|===
+|Field |Type |Required |Description
+
+|"name"
+|<<string>>
+|Required
+|Name of the publishing organization.
+
+|"email_address"
+|<<EmailAddress>>
+|Optional
+|Contact email address for the publisher.
+
+|===
+
+## Examples
+
+.Examples
+[source,json]
+----
+{
+  "name": "Publishing Co",
+  "email_address": "contact@example.org"
+}
+----

@@ -1,0 +1,108 @@
+# News Article
+
+[.lead]
+A complete news article, ready to be output in a variety of different formats
+by consumers such as Facebook Instant Articles, Google AMP, and Apple News.
+
+## Parameters
+
+.Parameters
+|===
+|Field |Type |Required |Description
+
+|"uuid"
+|Uuid
+|Required
+|Universally-unique identifier of this article.
+
+|"canonicalUrl"
+|<<Url>>
+|Optional
+|Canonical URL where this article is hosted.
+
+|"headline"
+|<<string>>
+|Required
+|The headline of the article. Cannot contain any formatting or markup.
+
+|"subtitle"
+|<<string>>
+|Optional
+|The subtitle of the article.
+
+|"authors"
+|[<<Author>>]
+|Required
+|List of authors who created the article.
+
+|"publishers"
+|[<<Publisher>>]
+|Required
+|List of organizations that published the article.
+
+|"datePublished"
+|<<DateTime>>
+|Required
+|The date and time when this article was originally published.
+
+|"dateModified"
+|<<DateTime>>
+|Required
+|The date and time when this article was last modified.
+
+|"lead"
+|<<string>>
+|Required
+|Concise lead-in to the article's content, possibly a summary or excerpt. Cannot
+contain any formatting or markup.
+
+|"coverImage"
+|<<Image>>
+|Required
+|Image used as the cover or feature on teasers and article header.
+
+|"body"
+|[<<Component>>]
+|Required
+|Body of the article, broken into individual components.
+
+|===
+
+
+## Examples
+
+.Examples
+[source,json]
+----
+{
+  "@type": "NewsArticle",
+  "uuid": "9de123cf-0128-4d6e-ab48-21be710f5fdb",
+  "canonicalUrl": "https://example.com/articles/2017/01/13/article",
+  "headline": "Maecenas Tempus Nunc et Orci Venenatis",
+  "authors": [
+    {
+      "name": {
+        "first_name": "John",
+        "middle_name": "M.",
+        "last_name": "Doe"
+      }
+    }
+  ],
+  "publishers": [
+    {
+      "name": "Publisher Co"
+    }
+  ],
+  "datePublished": "2017-01-13T16:54:48+00:00",
+  "dateModified": "2017-01-13T16:54:48+00:00",
+  "lead": "Integer commodo ipsum elit, at fringilla turpis ullamcorper ut. Nullam convallis non dui eu accumsan. Phasellus a suscipit felis. Suspendisse nec purus metus. Donec facilisis mi non enim lobortis, ut aliquet nulla tempor. Nunc molestie luctus risus, ut varius diam interdum ut. Nulla blandit quis felis in imperdiet. Vivamus vitae faucibus quam.",
+  "coverImage": {
+    "url": "https://example.com/images/example.jpg",
+    "width": 1200,
+    "height": 800
+  },
+  "body": [
+    ...
+  ]
+}
+----
