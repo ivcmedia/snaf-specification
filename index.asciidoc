@@ -5,5 +5,7 @@ v0.1.0, 2017-02-21
 
 :leveloffset: 1
 include::news_article.asciidoc[]
+:leveloffset: 1
 include::data_types/index.asciidoc[]
+:leveloffset: 1
 include::components/index.asciidoc[]
