@@ -1,0 +1,46 @@
+[[Semver]]
+= Semver
+
+A JSON string containing a valid v2 semantic version with MAJOR, MINOR and
+PATCH version numbers.
+
+== Invariants
+
+- Must be a valid v2 semantic version string.
+
+== Examples
+
+.Valid Semvers
+[source,json]
+----
+[
+  "0.1.0",
+  "1.5.35",
+  "4.11.250-beta.6"
+]
+----
+
+.Invalid Semvers
+[source,json]
+----
+[
+  {
+    "value": "5",
+    "errors": [
+      "Semver values must have at least a MAJOR, MINOR, and PATCH version number"
+    ]
+  },
+  {
+    "value": "1.5",
+    "errors": [
+      "Semver values must have at least a MAJOR, MINOR, and PATCH version number"
+    ]
+  },
+  {
+    "value": "v1.5.15",
+    "errors": [
+      "Not a valid Semver value (do not prefix with \"v\" or \"version\")"
+    ]
+  }
+]
+----

@@ -21,6 +21,8 @@ include::image_resource.asciidoc[leveloffset=+1]
 
 include::publisher.asciidoc[leveloffset=+1]
 
+include::semver.asciidoc[leveloffset=+1]
+
 include::string.asciidoc[leveloffset=+1]
 
 include::u32.asciidoc[leveloffset=+1]
