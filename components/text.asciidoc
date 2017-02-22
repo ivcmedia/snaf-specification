@@ -20,6 +20,10 @@ textPosition::
 isStrikethrough::
   Indicates that the text is no longer relevant or accurate or has been removed
   in an edit, often represented by a line through the middle of the text.
+isUnderlined::
+  Indicates that the text should be underlined. Note that this does not indicate
+  importance or emphasis, it is purely for stylistically offsetting the text
+  from the surrounding text.
 link::
   Indicates that the text refers to a web resource.
 
@@ -45,6 +49,8 @@ textPosition::
   respectively
 isStrikethrough::
   Uses a `<s>` tag.
+isUnderlined::
+  Uses a `<u>` tag.
 link::
   Uses a `<a>` tag with its href attribute set to the url.
 
@@ -80,6 +86,11 @@ always escaped to prevent CWE-79 (Cross-site scripting) attacks.
 |Optional (default false)
 |Whether this text should be marked as stricken.
 
+|"isUnderlined"
+|<<bool>>
+|Optional (default false)
+|Whether this text should be marked as underlined.
+
 |"link"
 |<<Url>>
 |Optional
@@ -105,7 +116,7 @@ always escaped to prevent CWE-79 (Cross-site scripting) attacks.
 ----
 
 .Example 2: Common Modifiers
-`It is _imparative_ that [line-through]#you# we act *now*!`
+`It is _imparative_ that [line-through]#you# we [underline]#act# *now*!`
 [source,json]
 ----
 {
@@ -131,7 +142,16 @@ always escaped to prevent CWE-79 (Cross-site scripting) attacks.
     },
     {
       "@type": "text",
-      "text": " we act "
+      "text": " we "
+    },
+    {
+      "@type": "text",
+      "isUnderlined": true,
+      "text": "act"
+    },
+    {
+      "@type": "text",
+      "text": " "
     },
     {
       "@type": "text",
