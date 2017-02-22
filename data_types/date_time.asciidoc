@@ -3,7 +3,7 @@
 
 A <<string>> containing an ISO 8601 datetime.
 
-== Validations
+== Invariants
 
 - Must be a valid ISO 8601 formatted string containing the date, time, and
   timezone offset for a single point in time, e.g. "YYYY-MM-DDThh:mm:ss±hh:mm".

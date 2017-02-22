@@ -72,7 +72,7 @@ If `"format"` is `"png"` or `"jpeg"` it renders as an `Image` component; if
 
 |===
 
-== Validations
+== Invariants
 
 - `imageResource[width]` and `imageResource[height]` should be at least 2048,
   and must be smaller than 6000.footnote:[Facebook Instant articles recommends

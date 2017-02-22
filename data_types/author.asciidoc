@@ -22,7 +22,7 @@ info.
 
 |===
 
-== Validations
+== Invariants
 
 - `"name"` must not be an empty string for nicknames, and for full names both
   `"first_name"` and `"last_name"` must not be empty strings. If `"middle_name"`

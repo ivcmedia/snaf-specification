@@ -3,7 +3,7 @@
 
 A <<string>> containing a parsable email address.
 
-== Validations
+== Invariants
 
 - Must be fewer than 254 characters long.footnote:[This is to protect against
   potential denial of service attacks. The length of 254 characters is based

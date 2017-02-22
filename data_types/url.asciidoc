@@ -3,7 +3,7 @@
 
 A <<string>> containing a valid, absolute URL.
 
-== Validations
+== Invariants
 
 - Must be parsable as a valid URL according to
   https://tools.ietf.org/html/rfc7230[RFC 7230].

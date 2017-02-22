@@ -3,7 +3,7 @@
 
 A JSON string containing valid UTF-8 text.
 
-== Validations
+== Invariants
 
 - Must be UTF-8 encoded.
 - Unless otherwise stated, all strings are limited to 4086 bytes.footnote:[

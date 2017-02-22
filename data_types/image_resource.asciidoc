@@ -31,7 +31,7 @@ A structure describing a remote image resource in a web-compatible format.
 
 |===
 
-== Validations
+== Invariants
 
 - `"width"` must be non-zero.
 - `"height"` must be non-zero.
