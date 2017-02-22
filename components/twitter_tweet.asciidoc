@@ -48,7 +48,7 @@ footnote:[See https://dev.twitter.com/web/embedded-tweets.]
 [source,json]
 ----
 {
-  "@type": "twitter-tweet",
+  "@type": "TwitterTweet",
   "url": "https://twitter.com/Interior/status/463440424141459456"
 }
 ----
