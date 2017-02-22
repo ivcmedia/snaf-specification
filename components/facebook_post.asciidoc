@@ -42,10 +42,10 @@ footnote:[See https://developers.facebook.com/docs/plugins/embedded-posts#add-co
 
 * `"url"` must have an "https" scheme, a domain of "www.faceook.com", and a
   non-empty path segment matching one of the following regex:
-** `^(?:\/[^/]+\/posts\/\d+)|(?:\/permalink\.php\?story_fbid=\d+)$`
+** `++^(?:\/[^/]+\/posts\/\d+)|(?:\/permalink\.php\?story_fbid=\d+)$++`
    (user/page posts)
-** `^\/[^/]+\/activity\/\d+$` (user activity)
-** `^(?:\/photos\/\d+)|(?:\/photo\.php\?fbid=\d+)$` (photo)
+** `++^\/[^/]+\/activity\/\d+$++` (user activity)
+** `++^(?:\/photos\/\d+)|(?:\/photo\.php\?fbid=\d+)$++` (photo)
 
 == Examples
 

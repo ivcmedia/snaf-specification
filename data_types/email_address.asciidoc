@@ -10,7 +10,7 @@ A <<string>> containing a parsable email address.
   upon the maximum length supported by the SMTP protocol (see this
   http://stackoverflow.com/questions/386294/what-is-the-maximum-length-of-a-valid-email-address[StackOverflow]
   response).]
-* Must match the PCRE regex `^.+@.+$`.footnote:[This regex is only meant to
+* Must match the PCRE regex `++^.+@.+$++`.footnote:[This regex is only meant to
   protect against the most egregious errors in email address entry.]
 
 == Examples

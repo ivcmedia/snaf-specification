@@ -41,7 +41,7 @@ footnote:[See https://dev.twitter.com/web/embedded-tweets.]
 
 * `"url"` must have an "https" scheme, a domain of "twitter.com", and a
   non-empty path segment matching the following regex:
-  `^\/[^/]+\/status\/\d+$`.
+  `++^\/[^/]+\/status\/\d+$++`.
 
 == Examples
 
