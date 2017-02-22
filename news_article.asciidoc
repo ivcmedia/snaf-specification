@@ -57,7 +57,7 @@ by consumers such as Facebook Instant Articles, Google AMP, and Apple News.
 contain any formatting or markup.
 
 |"coverImage"
-|<<Image>>
+|<<ImageResource>>
 |Required
 |Image used as the cover or feature on teasers and article header.
 
@@ -98,6 +98,7 @@ contain any formatting or markup.
   "lead": "Integer commodo ipsum elit, at fringilla turpis ullamcorper ut. Nullam convallis non dui eu accumsan. Phasellus a suscipit felis. Suspendisse nec purus metus. Donec facilisis mi non enim lobortis, ut aliquet nulla tempor. Nunc molestie luctus risus, ut varius diam interdum ut. Nulla blandit quis felis in imperdiet. Vivamus vitae faucibus quam.",
   "coverImage": {
     "url": "https://example.com/images/example.jpg",
+    "format": "jpeg",
     "width": 1200,
     "height": 800
   },

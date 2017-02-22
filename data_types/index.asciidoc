@@ -15,7 +15,7 @@ include::date_time.asciidoc[leveloffset=+1]
 
 include::email_address.asciidoc[leveloffset=+1]
 
-include::image.asciidoc[leveloffset=+1]
+include::image_resource.asciidoc[leveloffset=+1]
 
 include::publisher.asciidoc[leveloffset=+1]
 

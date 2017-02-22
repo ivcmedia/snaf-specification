@@ -1,5 +1,5 @@
-[[Image]]
-= Image
+[[ImageResource]]
+= ImageResource
 
 A structure describing a remote image resource in a web-compatible format.
 

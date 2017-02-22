@@ -50,44 +50,35 @@ If `"format"` is `"png"` or `"jpeg"` it renders as an `Image` component; if
 |===
 |Field |Type |Required |Description
 
-|"url"
-|Url
+|"imageResource"
+|<<ImageResource>>
 |Required
-|Url to the image.
-
-|"format"
-|"png"\|"jpeg"\|"gif"
-|Required
-|Format of the image. Currently only PNG, JPEG and GIF are supported.
-
-|"width"
-|integer
-|Required
-|Width of the image in pixels. Recommended minimum of 2048. Must not exceed
-6000.
-
-|"height"
-|integer
-|Required
-|Height of the image in pixels. Recommended minimum of 2048. Must not exceed
-6000.
+|Image resource to be rendered.
 
 |"alt"
-|string
+|<<string>>
 |Required
 |Short, descriptive title of the image for screen readers.
 
 |"caption"
-|Text
+|<<Text>>
 |Optional
 |A longer caption that describes the image or provides context.
 
 |"attribution"
-|Text
+|<<Text>>
 |Optional
 |An attribution of your image source, copyright statement, etc.
 
 |===
+
+== Validations
+
+- `imageResource[width]` and `imageResource[height]` should be at least 2048,
+  and must be smaller than 6000.footnote:[Facebook Instant articles recommends
+  2048x2048 min image dimensions and requires a max of 6000x6000.]
+- Image pointed at by `imageResource[url]` must be less than 8MB.
+  footnote:[Facebook Instant articles supports images up to 8MB in size.]
 
 == Examples
 
@@ -95,15 +86,17 @@ If `"format"` is `"png"` or `"jpeg"` it renders as an `Image` component; if
 ----
 {
   "@type": "image",
-  "format": "jpeg",
-  "url": "[omitted]",
-  "width": 600,
-  "height": 371,
-  "alt": "Stop Deportations Rally",
-  "caption": "A group of protestors holding up a \"Stop Deportations\" sign.",
+  "imageResource": {
+    "url": "https://example.com/images/example.jpeg",
+    "format": "jpeg",
+    "width": 4048,
+    "height": 2048
+  },
+  "alt": "Alt text",
+  "caption": "A short description of the image.",
   "attribution": {
     "@type": "text",
-    "text": "Source: Shutterstock"
+    "text": "Source: John Doe"
   }
 }
 ----
