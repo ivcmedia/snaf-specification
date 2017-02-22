@@ -48,7 +48,7 @@ inside of a nested `<cite>` tag.
 [source,json]
 ----
 {
-  "@type": "blockquote",
+  "@type": "Blockquote",
   "text": {
     "@type": "Text",
     "text": "Four score and seven years ago...",
