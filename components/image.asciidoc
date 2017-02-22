@@ -2,9 +2,9 @@
 = Image
 
 An image in a one of the following web formats:
-- PNG
-- JPEG
-- GIF
+* PNG
+* JPEG
+* GIF
 
 == Supported Consumers
 
@@ -74,10 +74,10 @@ If `"format"` is `"png"` or `"jpeg"` it renders as an `Image` component; if
 
 == Invariants
 
-- `imageResource[width]` and `imageResource[height]` should be at least 2048,
+* `imageResource[width]` and `imageResource[height]` should be at least 2048,
   and must be smaller than 6000.footnote:[Facebook Instant articles recommends
   2048x2048 min image dimensions and requires a max of 6000x6000.]
-- Image pointed at by `imageResource[url]` must be less than 8MB.
+* Image pointed at by `imageResource[url]` must be less than 8MB.
   footnote:[Facebook Instant articles supports images up to 8MB in size.]
 
 == Examples

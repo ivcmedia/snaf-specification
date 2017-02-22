@@ -5,7 +5,7 @@ A 32-bit unsigned integer represented as a JSON number.
 
 ## Validations
 
-- Must be a positive integer in the range [0, 4294967296).
+* Must be a positive integer in the range [0, 4294967296).
 
 ## Examples
 

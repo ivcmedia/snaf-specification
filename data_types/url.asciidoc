@@ -5,20 +5,20 @@ A <<string>> containing a valid, absolute URL.
 
 == Invariants
 
-- Must be parsable as a valid URL according to
+* Must be parsable as a valid URL according to
   https://tools.ietf.org/html/rfc7230[RFC 7230].
-- Must be under 2,000 characters.footnote:[This protects against potential
+* Must be under 2,000 characters.footnote:[This protects against potential
   denial of service attacks. The 2,000 character limit was chosen based upon
   recommendations from a StackOverflow post:
   http://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url-in-different-browsers]
-- Must have a scheme of "http" or "https". If a resource is available over
+* Must have a scheme of "http" or "https". If a resource is available over
   https then that scheme should be preferred.
-- Must NOT have an authority part.footnote:[SNAF articles are meant to be publicly
+* Must NOT have an authority part.footnote:[SNAF articles are meant to be publicly
   distributed, hard-coding usernames and passwords is a very bad idea and is
   forbidden.]
-- May contain a path.
-- May contain a query.
-- May contain a fragment.
+* May contain a path.
+* May contain a query.
+* May contain a fragment.
 
 == Examples
 

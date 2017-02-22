@@ -24,7 +24,7 @@ info.
 
 == Invariants
 
-- `"name"` must not be an empty string for nicknames, and for full names both
+* `"name"` must not be an empty string for nicknames, and for full names both
   `"first_name"` and `"last_name"` must not be empty strings. If `"middle_name"`
   is provided, it must be non-empty.
 

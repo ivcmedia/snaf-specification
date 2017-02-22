@@ -32,7 +32,7 @@ All three consumers render Heading as `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>` or
 
 == Invariants
 
-- `"level"` must be in the range [1, 6].
+* `"level"` must be in the range [1, 6].
 
 == Examples
 

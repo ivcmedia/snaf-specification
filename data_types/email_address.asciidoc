@@ -5,12 +5,12 @@ A <<string>> containing a parsable email address.
 
 == Invariants
 
-- Must be fewer than 254 characters long.footnote:[This is to protect against
+* Must be fewer than 254 characters long.footnote:[This is to protect against
   potential denial of service attacks. The length of 254 characters is based
   upon the maximum length supported by the SMTP protocol (see this
   http://stackoverflow.com/questions/386294/what-is-the-maximum-length-of-a-valid-email-address[StackOverflow]
   response).]
-- Must match the PCRE regex `^.+@.+$`.footnote:[This regex is only meant to
+* Must match the PCRE regex `^.+@.+$`.footnote:[This regex is only meant to
   protect against the most egregious errors in email address entry.]
 
 == Examples

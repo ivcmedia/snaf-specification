@@ -63,11 +63,11 @@ Rendered as an `Embed` component with `HTML Source`, `Width`, `Height` and
 
 == Invariants
 
-- `"src"` <<Url>> must have an "https" scheme; "http" schemes are not allowed.
+* `"src"` <<Url>> must have an "https" scheme; "http" schemes are not allowed.
   footnote:[This is a hard requirement set by AMP, see the specification for
   https://github.com/ampproject/amphtml/blob/master/extensions/amp-iframe/amp-iframe.md[`<amp-iframe>`]]
-- `"width"` must be non-zero.
-- `"height"` must be non-zero.
+* `"width"` must be non-zero.
+* `"height"` must be non-zero.
 
 == Examples
 
