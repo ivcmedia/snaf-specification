@@ -17,7 +17,9 @@ after_failure:
   - docker logs asciidoc-to-html
 
 after_success:
-  - cd output; mv README.html index.html
+  - cd output
+  - mv README.html index.html
+  - echo "${DEPLOY_DOMAIN}" > CNAME
   - git init
   - git config user.name "${GH_USER_NAME}"
   - git config user.email "${GH_USER_EMAIL}"
