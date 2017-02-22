@@ -1,0 +1,47 @@
+[[HeadingComponent]]
+= Heading
+
+A piece that text that defines a new section for subsequent content.
+
+== Supported Consumers
+
+- [x] Apple News
+- [x] AMP
+- [x] Facebook Instant Articles
+
+All three consumers render Heading as `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>` or
+`<h6>` tags according upon the `"level"` parameter.
+
+== Parameters
+
+.Parameters
+|===
+|Field |Type |Required |Description
+
+|"content"
+|[<<string>>]
+|Required
+|The string content of the heading. May not contain any markup.
+
+|"level"
+|<<u32>>
+|Required
+|The level of the heading, 1-6.
+
+|===
+
+== Invariants
+
+- `"level"` must be in the range [1, 6].
+
+== Examples
+
+.Example Heading
+[source,json]
+----
+{
+  "@type": "heading",
+  "level": 2,
+  "content": "This is level-2 section title"
+}
+----
