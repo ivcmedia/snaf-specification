@@ -1,0 +1,15 @@
+[[bool]]
+= bool
+
+A boolean (true/false) value represented as a JSON `true` or `false` value.
+
+## Examples
+
+.Valid bools
+[source,json]
+----
+[
+  true,
+  false
+]
+----

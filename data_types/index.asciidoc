@@ -11,6 +11,8 @@ how the datatype is represented in SNAF JSON, their invariants, and
 
 include::author.asciidoc[leveloffset=+1]
 
+include::bool.asciidoc[leveloffset=+1]
+
 include::date_time.asciidoc[leveloffset=+1]
 
 include::email_address.asciidoc[leveloffset=+1]
