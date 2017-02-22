@@ -1,0 +1,66 @@
+[[ListComponent]]
+= List
+
+An ordered or unordered list of text.
+
+== Supported Consumers
+
+- [x] Apple News
+- [x] AMP
+- [x] Facebook Instant Articles
+
+All three consumers render List as a `<ul>` tag for unordered lists or an `<ol>`
+tag for ordered lists with nested `<li>` tags for each item.
+
+== Parameters
+
+.Parameters
+|===
+|Field |Type |Required |Description
+
+|"items"
+|[<<Text>>]
+|Required
+|The text items.
+
+|"isOrderered"
+|<<bool>>
+|Optional (default false)
+|Whether the order of the items in this list is significant.
+
+|===
+
+== Examples
+
+.Example List
+[source,json]
+----
+{
+  "@type": "list",
+  "isOrdered": true,
+  "items": [
+    {
+      "@type": "text",
+      "text": "The U.S. population is almost 300 million."
+    },
+    {
+      "@type": "text",
+      "text": [
+        {
+          "@type": "text",
+          "text": "According to "
+        },
+        {
+          "@type": "text",
+          "link": "https://wikipedia.org/wiki/United_States",
+          "text": "Wikipedia"
+        },
+        {
+          "@type": "text",
+          "text": ", the U.S. has a total land area of 3.8 million square miles."
+        }
+      ]
+    }
+  ]
+}
+----
