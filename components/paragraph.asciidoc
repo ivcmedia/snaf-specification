@@ -29,7 +29,7 @@ All three render paragraphs as `<p>` tags with their nested text.
 [source,json]
 ----
 {
-  "@type": "paragraph",
+  "@type": "Paragraph",
   "text": [
     {
       "@type": "Text",

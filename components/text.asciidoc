@@ -105,7 +105,7 @@ always escaped to prevent CWE-79 (Cross-site scripting) attacks.
 [source,json]
 ----
 {
-  "@type": "paragraph",
+  "@type": "Paragraph",
   "content": [
     {
       "@type": "Text",
@@ -120,7 +120,7 @@ always escaped to prevent CWE-79 (Cross-site scripting) attacks.
 [source,json]
 ----
 {
-  "@type": "paragraph",
+  "@type": "Paragraph",
   "content": [
     {
       "@type": "Text",
@@ -171,7 +171,7 @@ always escaped to prevent CWE-79 (Cross-site scripting) attacks.
 [source,json]
 ----
 {
-  "@type": "paragraph",
+  "@type": "Paragraph",
   "content": [
     {
       "@type": "Text",
