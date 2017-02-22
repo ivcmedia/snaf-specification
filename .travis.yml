@@ -18,7 +18,6 @@ after_failure:
 
 after_success:
   - cd output
-  - mv README.html index.html
   - echo "${DEPLOY_DOMAIN}" > CNAME
   - git init
   - git config user.name "${GH_USER_NAME}"
