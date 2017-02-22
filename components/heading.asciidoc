@@ -40,7 +40,7 @@ All three consumers render Heading as `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>` or
 [source,json]
 ----
 {
-  "@type": "heading",
+  "@type": "Heading",
   "level": 2,
   "content": "This is level-2 section title"
 }
