@@ -1,0 +1,32 @@
+[[Uuid]]
+= Uuid
+
+A JSON string containing a valid Version 4 UUID.
+
+== Invariants
+
+- Must contain a valid Version 4 UUID.
+
+== Examples
+
+.Valid Uuids
+[source,json]
+----
+[
+  "84533174-302e-4da6-8ac1-e3530548d85f",
+  "b268a3e1-5a0a-4cbd-b805-bcab7bbaa162"
+]
+----
+
+.Invalid Uuids
+[source,json]
+----
+[
+  {
+    "value": "257d631c-f947-11e6-bc64-92361f002671",
+    "errors": [
+      "Not a valid Version 4 UUID"
+    ]
+  }
+]
+----

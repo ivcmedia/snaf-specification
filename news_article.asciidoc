@@ -11,7 +11,7 @@ by consumers such as Facebook Instant Articles, Google AMP, and Apple News.
 |Field |Type |Required |Description
 
 |"uuid"
-|Uuid
+|<<Uuid>>
 |Required
 |Universally-unique identifier of this article.
 
