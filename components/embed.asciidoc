@@ -1,0 +1,84 @@
+[[EmbedComponent]]
+= Embed
+
+An embedded web resource, typically rendered as an iframe.
+
+== Supported Consumers
+
+- [ ] Apple News
+- [x] AMP
+- [x] Facebook Instant Articles
+
+Note that not all embedded resources are supported by all consumers. It is up
+to the publisher to test the embeds in each of the consumers and ensure that
+they work as expected.
+
+=== Apple News
+
+Apple News does not currently support generic embeds, and they will not be
+rendered in Apple News consumers.
+
+=== AMP
+
+Rendered as an `<amp-iframe>` tag with a `src` attribute set to the `"src"`
+parameter and `width` and `height` attributes set to `"width"` and `"height"`,
+respectively.
+
+If `"caption"` parameter is provided, it is wrapped in a `<figure>` tag and
+a `<figcaption>` tag is appended below the `<amp-iframe>` tag with the content
+of the `"caption"` parameter.
+
+=== Facebook Instant Articles
+
+Rendered as an `Embed` component with `HTML Source`, `Width`, `Height` and
+`Caption` set to `"src"`, `"width"`, `"height"`, and `"caption"` respectively.
+
+== Parameters
+
+.Parameters
+|===
+|Field |Type |Required |Description
+
+|"src"
+|<<Url>>
+|Required
+|Url of the web resource to embed in the article.
+
+|"width"
+|<<u32>>
+|Required
+|Width of the embedded resource in pixels.
+
+|"height"
+|<<u32>>
+|Required
+|Height of the embedded resource in pixels.
+
+|"caption"
+|<<string>>
+|Optional
+|A caption describing the embedded resource.
+
+|===
+
+== Invariants
+
+- `"src"` <<Url>> must have an "https" scheme; "http" schemes are not allowed.
+  footnote:[This is a hard requirement set by AMP, see the specification for
+  https://github.com/ampproject/amphtml/blob/master/extensions/amp-iframe/amp-iframe.md[`<amp-iframe>`]]
+- `"width"` must be non-zero.
+- `"height"` must be non-zero.
+
+== Examples
+
+.Example Embed
+[source,json]
+----
+{
+  "@type": "embed",
+  "src": "https://example.com/interactive-embed",
+  "width": 300,
+  "height": 250,
+  "caption": "An example embedded resource."
+}
+----
