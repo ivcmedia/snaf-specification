@@ -24,6 +24,9 @@ isUnderlined::
   Indicates that the text should be underlined. Note that this does not indicate
   importance or emphasis, it is purely for stylistically offsetting the text
   from the surrounding text.
+isCode::
+  Indicates that the text contains a snippet of computer code, usually rendered
+  in a monospace font.
 link::
   Indicates that the text refers to a web resource.
 
@@ -51,6 +54,8 @@ isStrikethrough::
   Uses a `<s>` tag.
 isUnderlined::
   Uses a `<u>` tag.
+isCode::
+  Uses a `<code>` tag.
 link::
   Uses a `<a>` tag with its href attribute set to the url.
 
@@ -90,6 +95,11 @@ always escaped to prevent CWE-79 (Cross-site scripting) attacks.
 |<<bool>>
 |Optional (default false)
 |Whether this text should be marked as underlined.
+
+|"isCode"
+|<<bool>>
+|Optional (default false)
+|Whether this text should be marked as computer code.
 
 |"link"
 |<<Url>>
