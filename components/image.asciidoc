@@ -85,7 +85,7 @@ If `"format"` is `"png"` or `"jpeg"` it renders as an `Image` component; if
 [source,json]
 ----
 {
-  "@type": "image",
+  "@type": "Image",
   "imageResource": {
     "url": "https://example.com/images/example.jpeg",
     "format": "jpeg",

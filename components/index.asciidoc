@@ -10,7 +10,7 @@ represented as the the following JSON object:
 [source,json]
 --
 {
-  "@type": "image",
+  "@type": "Image",
   "url": "https://example.com/images/example.jpeg",
   "width": 300,
   "height": 150
