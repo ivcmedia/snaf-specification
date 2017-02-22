@@ -75,7 +75,7 @@ Rendered as an `Embed` component with `HTML Source`, `Width`, `Height` and
 [source,json]
 ----
 {
-  "@type": "embed",
+  "@type": "Embed",
   "src": "https://example.com/interactive-embed",
   "width": 300,
   "height": 250,
