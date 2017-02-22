@@ -1,0 +1,69 @@
+[[YoutubeVideoComponent]]
+= YoutubeVideo
+
+An embedded YouTube video.
+
+== Supported Consumers
+
+- [x] Apple News
+- [x] AMP
+- [x] Facebook Instant Articles
+
+=== Apple News
+
+Renders as a `Embedded Web Video` component with `URL` property set to the
+`"url"` parameter and `aspectRatio` set to `"width"` divided by `"height"`
+rounded to three significant figures.
+
+=== AMP
+
+Renders as a `<amp-youtube>` tag with `data-videoid` attribute set to the video
+ID extracted from the `"url"` parameter and `width` and `height` attributes set
+to the `"width"` and `"height"` parameters, respectively.
+
+=== Facebook Instant Articles
+
+Renders as an `Embed` component. The `src` attribute of the `<iframe>` tag is
+set to the `"url"` parameter and the `width` and `height` attributes are set to
+the `"width"` the `"height"` parameters, respectively.
+
+== Parameters
+
+.Parameters
+|===
+|Field |Type |Required |Description
+
+|"url"
+|<<Url>>
+|Required
+|Url of the Tweet to embed.
+
+|"width"
+|<<u32>>
+|Required
+|Width of the video in pixels.
+
+|"height"
+|<<u32>>
+|Required
+|Height of the video in pixels.
+
+|===
+
+== Invariants
+
+* `"url"` must have an "https" scheme, a domain of "www.youtube.com", and a
+  non-empty path segment matching the following regex:
+  `++^\/embed\/[^/]+$++`.
+
+== Examples
+
+[source,json]
+----
+{
+  "@type": "YoutubeVideo",
+  "url": "https://www.youtube.com/embed/M7lc1UVf-V",
+  "width": 560,
+  "height": 315
+}
+----

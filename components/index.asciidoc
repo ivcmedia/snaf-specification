@@ -36,3 +36,5 @@ include::paragraph.asciidoc[leveloffset=+1]
 include::text.asciidoc[leveloffset=+1]
 
 include::twitter_tweet.asciidoc[leveloffset=+1]
+
+include::youtube_video.asciidoc[leveloffset=+1]
