@@ -33,6 +33,8 @@ include::list.asciidoc[leveloffset=+1]
 
 include::paragraph.asciidoc[leveloffset=+1]
 
+include::preformatted_text.asciidoc[leveloffset=+1]
+
 include::text.asciidoc[leveloffset=+1]
 
 include::twitter_tweet.asciidoc[leveloffset=+1]

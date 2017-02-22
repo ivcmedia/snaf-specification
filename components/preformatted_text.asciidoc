@@ -1,0 +1,37 @@
+[[PreformattedTextComponent]]
+= PreformattedText
+
+A block of preformatted text that preserves whitespace and linebreaks in the
+source. Typically rendered in a monospace font.
+
+== Supported Consumers
+
+- [x] Apple News
+- [x] AMP
+- [x] Facebook Instant Articles
+
+All three consumers produce a `<pre>` tag containing the text from the
+`"content"` parameter.
+
+== Parameters
+
+.Parameters
+|===
+|Field |Type |Required |Description
+
+|"content"
+|<<string>>
+|Required
+|Preformatted text content.
+
+|===
+
+== Examples
+
+[source,json]
+----
+{
+  "@type": "PreformattedText",
+  "content": "var occupations = [\n\t\"Malcolm\": \"Captain\",\n\t\"Kaylee\": \"Mechanic\",\n]"
+}
+----
