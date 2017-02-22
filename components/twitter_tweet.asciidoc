@@ -1,0 +1,54 @@
+[[TwitterTweetComponent]]
+= TwitterTweet
+
+An embedded Twitter Tweet.
+
+== Supported Consumers
+
+- [x] Apple News
+- [x] AMP
+- [x] Facebook Instant Articles
+
+=== Apple News
+
+Renders as a `Tweet` component with `URL` property set to the `"url"` parameter.
+
+=== AMP
+
+Renders as a `<amp-twitter>` tag with `data-tweetid` set to the Tweet ID
+extracted from the `"url"` parameter.
+
+=== Facebook Instant Articles
+
+Renders as an `Embed` component with the full Twitter Tweet embed code inside of
+the `<iframe>` tag using the Tweet ID extracted from the `"url"` parameter.
+footnote:[See https://dev.twitter.com/web/embedded-tweets.]
+
+== Parameters
+
+.Parameters
+|===
+|Field |Type |Required |Description
+
+|"url"
+|<<Url>>
+|Required
+|Url of the Tweet to embed.
+
+|===
+
+== Invariants
+
+- `"url"` must have an "https" scheme, a domain of "twitter.com", and a
+  non-empty path segment matching the following regex:
+  `^\/([a-zA-Z0-9_]+)\/status\/(\d+)$`.
+
+== Examples
+
+[source,json]
+----
+{
+  "@type": "twitter-tweet",
+  "url": "https://twitter.com/Interior/status/463440424141459456"
+}
+----
