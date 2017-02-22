@@ -52,7 +52,7 @@ footnote:[See https://developers.facebook.com/docs/plugins/embedded-posts#add-co
 [source,json]
 ----
 {
-  "@type": "facebook-post",
+  "@type": "FacebookPost",
   "url": "https://www.facebook.com/20531316728/posts/10154009990506729"
 }
 ----
