@@ -108,7 +108,7 @@ always escaped to prevent CWE-79 (Cross-site scripting) attacks.
   "@type": "paragraph",
   "content": [
     {
-      "@type": "text",
+      "@type": "Text",
       "text": "The red fox jumped over the white fence."
     }
   ]
@@ -123,43 +123,43 @@ always escaped to prevent CWE-79 (Cross-site scripting) attacks.
   "@type": "paragraph",
   "content": [
     {
-      "@type": "text",
+      "@type": "Text",
       "text": "It is "
     },
     {
-      "@type": "text",
+      "@type": "Text",
       "emphasize": true,
       "text": "imperative"
     },
     {
-      "@type": "text",
+      "@type": "Text",
       "text": " that "
     },
     {
-      "@type": "text",
+      "@type": "Text",
       "isStrikethrough": true,
       "text": "you"
     },
     {
-      "@type": "text",
+      "@type": "Text",
       "text": " we "
     },
     {
-      "@type": "text",
+      "@type": "Text",
       "isUnderlined": true,
       "text": "act"
     },
     {
-      "@type": "text",
+      "@type": "Text",
       "text": " "
     },
     {
-      "@type": "text",
+      "@type": "Text",
       "isStrong": true,
       "text": "now"
     },
     {
-      "@type": "text",
+      "@type": "Text",
       "text": "!"
     }
   ]
@@ -174,48 +174,48 @@ always escaped to prevent CWE-79 (Cross-site scripting) attacks.
   "@type": "paragraph",
   "content": [
     {
-      "@type": "text",
+      "@type": "Text",
       "text": "According to "
     },
     {
-      "@type": "text",
+      "@type": "Text",
       "link": "https://en.wikipedia.org/wiki/Water",
       "text": "Wikipedia"
     },
     {
-      "@type": "text",
+      "@type": "Text",
       "text": ", the "
     },
     {
-      "@type": "text",
+      "@type": "Text",
       "isEmphasis": true,
       "text": "chemical formula"
     },
     {
-      "@type": "text",
+      "@type": "Text",
       "text": " of water is "
     },
     {
-      "@type": "text",
+      "@type": "Text",
       "isStrong": true,
       "text": [
         {
-          "@type": "text",
+          "@type": "Text",
           "text": "H"
         },
         {
-          "@type": "text",
+          "@type": "Text",
           "textPosition": "subscript",
           "text": "2"
         },
         {
-          "@type": "text",
+          "@type": "Text",
           "text": "O"
         }
       ]
     },
     {
-      "@type": "text",
+      "@type": "Text",
       "text": "."
     }
   ]

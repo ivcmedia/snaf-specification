@@ -50,11 +50,11 @@ inside of a nested `<cite>` tag.
 {
   "@type": "blockquote",
   "text": {
-    "@type": "text",
+    "@type": "Text",
     "text": "Four score and seven years ago...",
   },
   "attribution": {
-    "@type": "text",
+    "@type": "Text",
     "link": "https://en.wikipedia.org/wiki/Gettysburg_Address",
     "text": "Abraham Lincoln"
   }

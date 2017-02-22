@@ -95,7 +95,7 @@ If `"format"` is `"png"` or `"jpeg"` it renders as an `Image` component; if
   "alt": "Alt text",
   "caption": "A short description of the image.",
   "attribution": {
-    "@type": "text",
+    "@type": "Text",
     "text": "Source: John Doe"
   }
 }
