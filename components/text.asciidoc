@@ -55,18 +55,18 @@ link::
 |Field |Type |Required |Description
 
 |"text"
-|string \| [Text]
+|<<string>> \| [<<Text>>]
 |Required
 |The group of text. May contain nested Text or plain strings. Plain strings are
 always escaped to prevent CWE-79 (Cross-site scripting) attacks.
 
 |"isEmphasized"
-|boolean
+|<<bool>>
 |Optional (default false)
 |Whether this text should be emphasized.
 
 |"isStrong"
-|boolean
+|<<bool>>
 |Optional (default false)
 |Whether this text should be marked with strong importance.
 
@@ -76,12 +76,12 @@ always escaped to prevent CWE-79 (Cross-site scripting) attacks.
 |The position of the text, either baseline, subscripted or superscripted.
 
 |"isStrikethrough"
-|boolean
+|<<bool>>
 |Optional (default false)
 |Whether this text should be marked as stricken.
 
 |"link"
-|Url
+|<<Url>>
 |Optional
 |URL that identifies a web resource referred to by this text.
 
