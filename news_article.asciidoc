@@ -15,6 +15,11 @@ by consumers such as Facebook Instant Articles, Google AMP, and Apple News.
 |Required
 |Universally-unique identifier of this article.
 
+|"snafVersion"
+|Semver
+|Required
+|Semantic version of the SNAF specification that this <<NewsArticle>> follows.
+
 |"canonicalUrl"
 |<<Url>>
 |Optional
@@ -76,6 +81,11 @@ contain any formatting or markup.
 ----
 {
   "@type": "NewsArticle",
+  "snafVersion": {
+    "major": 0,
+    "minor": 1,
+    "patch": 0
+  },
   "uuid": "9de123cf-0128-4d6e-ab48-21be710f5fdb",
   "canonicalUrl": "https://example.com/articles/2017/01/13/article",
   "headline": "Maecenas Tempus Nunc et Orci Venenatis",
