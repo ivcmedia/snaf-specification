@@ -1,0 +1,58 @@
+[[FacebookPostComponent]]
+= FacebookPost
+
+An embedded Facebook Post.
+
+== Supported Consumers
+
+- [x] Apple News
+- [x] AMP
+- [x] Facebook Instant Articles
+
+=== Apple News
+
+Renders as a `Facebook Post` component with `URL` property set to the `"url"`
+parameter.
+
+=== AMP
+
+Renders as a `<amp-facebook>` tag with `data-href` attribute set to the `"url"`
+parameter.
+
+=== Facebook Instant Articles
+
+Renders as an `Embed` component with the full Facebook Post embed code inside of
+the `<iframe>` tag.
+footnote:[See https://developers.facebook.com/docs/plugins/embedded-posts#add-code-manually.]
+
+== Parameters
+
+.Parameters
+|===
+|Field |Type |Required |Description
+
+|"url"
+|<<Url>>
+|Required
+|Url of the Facebook Post to embed.
+
+|===
+
+== Invariants
+
+* `"url"` must have an "https" scheme, a domain of "www.faceook.com", and a
+  non-empty path segment matching one of the following regex:
+** `^(?:\/[^/]+\/posts\/\d+)|(?:\/permalink\.php\?story_fbid=\d+)$`
+   (user/page posts)
+** `^\/[^/]+\/activity\/\d+$` (user activity)
+** `^(?:\/photos\/\d+)|(?:\/photo\.php\?fbid=\d+)$` (photo)
+
+== Examples
+
+[source,json]
+----
+{
+  "@type": "facebook-post",
+  "url": "https://www.facebook.com/20531316728/posts/10154009990506729"
+}
+----
