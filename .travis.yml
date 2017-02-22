@@ -1,5 +1,8 @@
 sudo: required
 
+env:
+  - DEPLOY_DOMAIN=specification.snaf.io
+
 services:
   - docker
 
