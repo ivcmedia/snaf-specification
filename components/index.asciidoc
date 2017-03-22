@@ -3,9 +3,9 @@
 
 The body of a <<NewsArticle>> is broken up into individual, modular components.
 
-All components are represented as JSON objects with a special "@type" key that
-identifies the type of component. For example, an image component might be
-represented as the the following JSON object:
+All components (with the exception of <<Text>>) are represented as JSON objects
+with a special "@type" key that identifies the type of component. For example,
+an image component might be represented as the the following JSON object:
 
 [source,json]
 --

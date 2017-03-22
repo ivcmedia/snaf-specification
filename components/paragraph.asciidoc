@@ -18,7 +18,7 @@ All three render paragraphs as `<p>` tags with their nested text.
 |Field |Type |Required |Description
 
 |"text"
-|[<<Text>>]
+|<<string>> \| [<<string>> \| <<Text>>]
 |Required
 |The ordered text content belonging to the paragraph.
 
@@ -31,19 +31,12 @@ All three render paragraphs as `<p>` tags with their nested text.
 {
   "@type": "Paragraph",
   "text": [
+    "According to ",
     {
-      "@type": "Text",
-      "text": "According to "
-    },
-    {
-      "@type": "Text",
       "link": "https://wikipedia.org/wiki/United_States",
       "text": "Wikipedia"
     },
-    {
-      "@type": "Text",
-      "text": ", the U.S. has a total land area of 3.8 million square miles."
-    }
+    ", the U.S. has a total land area of 3.8 million square miles."
   ]
 }
 ----

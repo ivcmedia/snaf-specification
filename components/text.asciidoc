@@ -14,9 +14,6 @@ isEmphasized::
 isStrong::
   Indicates that the text has strong importance, often represented by a bold
   text style.
-textPosition::
-  Indicates that the text should typeset as subscript or superscript, often
-  represented as smaller and higher or lower than the surrounding text.
 isStrikethrough::
   Indicates that the text is no longer relevant or accurate or has been removed
   in an edit, often represented by a line through the middle of the text.
@@ -27,6 +24,9 @@ isUnderlined::
 isCode::
   Indicates that the text contains a snippet of computer code, usually rendered
   in a monospace font.
+textPosition::
+  Indicates that the text should typeset as subscript or superscript, often
+  represented as smaller and higher or lower than the surrounding text.
 link::
   Indicates that the text refers to a web resource.
 
@@ -47,15 +47,15 @@ isEmphasized::
   Uses a `<em>` tag.
 isStrong::
   Uses a `<strong>` tag.
-textPosition::
-  Uses a `<sub>` or `<sup>` tag for `"subscript"` and `"superscript"`,
-  respectively
 isStrikethrough::
   Uses a `<s>` tag.
 isUnderlined::
   Uses a `<u>` tag.
 isCode::
   Uses a `<code>` tag.
+textPosition::
+  Uses a `<sub>` or `<sup>` tag for `"subscript"` and `"superscript"`,
+  respectively
 link::
   Uses a `<a>` tag with its href attribute set to the url.
 
@@ -66,7 +66,7 @@ link::
 |Field |Type |Required |Description
 
 |"text"
-|<<string>> \| [<<Text>>]
+|<<string>> \| [<<string>> \| <<Text>>]
 |Required
 |The group of text. May contain nested Text or plain strings. Plain strings are
 always escaped to prevent CWE-79 (Cross-site scripting) attacks.
@@ -80,11 +80,6 @@ always escaped to prevent CWE-79 (Cross-site scripting) attacks.
 |<<bool>>
 |Optional (default false)
 |Whether this text should be marked with strong importance.
-
-|"textPosition"
-|"baseline" \| "subscript" \| "superscript"
-|Optional (default "baseline")
-|The position of the text, either baseline, subscripted or superscripted.
 
 |"isStrikethrough"
 |<<bool>>
@@ -101,6 +96,11 @@ always escaped to prevent CWE-79 (Cross-site scripting) attacks.
 |Optional (default false)
 |Whether this text should be marked as computer code.
 
+|"textPosition"
+|"baseline" \| "subscript" \| "superscript"
+|Optional (default "baseline")
+|The position of the text, either baseline, subscripted or superscripted.
+
 |"link"
 |<<Url>>
 |Optional
@@ -114,120 +114,61 @@ always escaped to prevent CWE-79 (Cross-site scripting) attacks.
 `The red fox jumped over the white fence.`
 [source,json]
 ----
-{
-  "@type": "Paragraph",
-  "content": [
-    {
-      "@type": "Text",
-      "text": "The red fox jumped over the white fence."
-    }
-  ]
-}
+"The red fox jumped over the white fence."
 ----
 
 .Example 2: Common Modifiers
-`It is _imparative_ that [line-through]#you# we [underline]#act# *now*!`
+`It is _imperative_ that [line-through]#you# we [underline]#act# *now*!`
 [source,json]
 ----
-{
-  "@type": "Paragraph",
-  "content": [
-    {
-      "@type": "Text",
-      "text": "It is "
-    },
-    {
-      "@type": "Text",
-      "emphasize": true,
-      "text": "imperative"
-    },
-    {
-      "@type": "Text",
-      "text": " that "
-    },
-    {
-      "@type": "Text",
-      "isStrikethrough": true,
-      "text": "you"
-    },
-    {
-      "@type": "Text",
-      "text": " we "
-    },
-    {
-      "@type": "Text",
-      "isUnderlined": true,
-      "text": "act"
-    },
-    {
-      "@type": "Text",
-      "text": " "
-    },
-    {
-      "@type": "Text",
-      "isStrong": true,
-      "text": "now"
-    },
-    {
-      "@type": "Text",
-      "text": "!"
-    }
-  ]
-}
+[
+  "It is ",
+  {
+    "isEmphasized": true,
+    "text": "imperative"
+  },
+  " that ",
+  {
+    "isStrikethrough": true,
+    "text": "you"
+  },
+  " we ",
+  {
+    "isUnderlined": true,
+    "text": "act"
+  },
+  " ",
+  {
+    "isStrong": true,
+    "text": "now"
+  },
+  "!"
+]
 ----
 
 .Example 3: Links and Nested Modifiers
-`According to https://en.wikipedia.org/wiki/Water[Wikipedia], the _chemical formula_ of water is *H~2~O*.`
+`According to _https://en.wikipedia.org/wiki/Water[Wikipedia]_, the chemical formula of water is *H~2~O*.`
 [source,json]
 ----
-{
-  "@type": "Paragraph",
-  "content": [
-    {
-      "@type": "Text",
-      "text": "According to "
-    },
-    {
-      "@type": "Text",
-      "link": "https://en.wikipedia.org/wiki/Water",
-      "text": "Wikipedia"
-    },
-    {
-      "@type": "Text",
-      "text": ", the "
-    },
-    {
-      "@type": "Text",
-      "isEmphasis": true,
-      "text": "chemical formula"
-    },
-    {
-      "@type": "Text",
-      "text": " of water is "
-    },
-    {
-      "@type": "Text",
-      "isStrong": true,
-      "text": [
-        {
-          "@type": "Text",
-          "text": "H"
-        },
-        {
-          "@type": "Text",
-          "textPosition": "subscript",
-          "text": "2"
-        },
-        {
-          "@type": "Text",
-          "text": "O"
-        }
-      ]
-    },
-    {
-      "@type": "Text",
-      "text": "."
-    }
-  ]
-}
+[
+  "According to ",
+  {
+    "isEmphasized": true,
+    "link": "https://en.wikipedia.org/wiki/Water",
+    "text": "Wikipedia"
+  },
+  ", the chemical formula of water is ",
+  {
+    "isStrong": true,
+    "text": [
+      "H",
+      {
+        "textPosition": "subscript",
+        "text": "2"
+      },
+      "O"
+    ]
+  },
+  "."
+]
 ----
