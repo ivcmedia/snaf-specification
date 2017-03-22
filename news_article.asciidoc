@@ -80,7 +80,6 @@ contain any formatting or markup.
 [source,json]
 ----
 {
-  "@type": "NewsArticle",
   "snafVersion": "0.1.0",
   "uuid": "9de123cf-0128-4d6e-ab48-21be710f5fdb",
   "canonicalUrl": "https://example.com/articles/2017/01/13/article",
