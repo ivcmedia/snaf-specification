@@ -18,7 +18,7 @@ All three render paragraphs as `<p>` tags with their nested text.
 |Field |Type |Required |Description
 
 |"text"
-|<<string>> \| [<<string>> \| <<Text>>]
+|<<Text>>
 |Required
 |The ordered text content belonging to the paragraph.
 

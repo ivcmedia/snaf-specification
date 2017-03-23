@@ -3,9 +3,9 @@
 
 The body of a <<NewsArticle>> is broken up into individual, modular components.
 
-All components (with the exception of <<Text>>) are represented as JSON objects
-with a special "@type" key that identifies the type of component. For example,
-an image component might be represented as the the following JSON object:
+All components are represented as JSON objects with a special "@type" key that
+identifies the type of component. For example, an image component might be
+represented as the the following JSON object:
 
 [source,json]
 --
@@ -34,8 +34,6 @@ include::list.asciidoc[leveloffset=+1]
 include::paragraph.asciidoc[leveloffset=+1]
 
 include::preformatted_text.asciidoc[leveloffset=+1]
-
-include::text.asciidoc[leveloffset=+1]
 
 include::twitter_tweet.asciidoc[leveloffset=+1]
 

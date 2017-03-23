@@ -1,9 +1,33 @@
-[[TextComponent]]
+[[Text]]
 = Text
 
 A group of semantically- or typographically-related text.
 
-== Overview
+Plain text with no modifiers is represented as a JSON <<string>>, while text
+containing one or more modifiers is represented as an array of
+<<string,strings>> and nested JSON objects (see Parameters section below for the
+shape of the JSON object). Text consisting of a single modifier applying to the
+entire content is represented as a single JSON object (*not* as an array since
+that would be redundant).
+
+Formally, Text may be represented as the following type union in Typescript
+notation:
+
+[source,typescript]
+----
+type Text = string | TextWithModifiers | Array<string | TextWithModifiers>
+
+interface TextWithModifiers {
+  isEmphasized?: bool,
+  isStrong?: bool,
+  isStrikethrough?: bool,
+  isUnderlined?: bool,
+  isCode?: bool,
+  textPosition?: 'baseline' | 'subscript' | 'superscript',
+  link?: Url,
+  text: Text
+}
+----
 
 Text supports the following modifiers that alter the contained text's semantic
 meaning and typographic attributes:
@@ -39,9 +63,8 @@ nested by nesting text components.
 - [x] AMP
 - [x] Facebook Instant Articles
 
-All three consumers render Text as a text string within its parent
-<<Paragraph>>. If there are any semantic modifiers on the Text, those are
-rendered using the following tags:
+All three consumers render Text as a text string. If there are any semantic
+modifiers on the Text, those are rendered using the following tags:
 
 isEmphasized::
   Uses a `<em>` tag.
@@ -66,7 +89,7 @@ link::
 |Field |Type |Required |Description
 
 |"text"
-|<<string>> \| [<<string>> \| <<Text>>]
+|<<Text>>
 |Required
 |The group of text. May contain nested Text or plain strings. Plain strings are
 always escaped to prevent CWE-79 (Cross-site scripting) attacks.
